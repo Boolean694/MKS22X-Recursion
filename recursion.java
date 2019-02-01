@@ -1,3 +1,4 @@
+import java.util.*;
 public class recursion {
   public static double SquareRt(double n) {
     if(n == 0.0) {return 0.0;}
@@ -20,11 +21,18 @@ public class recursion {
     else {return fh(n - 1) + fh(n - 2);}
   }
   public static ArrayList<Integer> makeAllSums(int n) {
-
+    ArrayList<Integer> rew = new ArrayList<Integer>();
+    mash(0, n, rew);
+    return rew;
   }
-  public static int ash(int n, boolean bool) {
-    
+  public static void mash(int su, int co, ArrayList<Integer> re) {
+    if(co == 0) {re.add(su);}
+    else {
+      mash(su + co, co - 1, re);
+      mash(su, co - 1, re);
+    }
   }
   public static void main(String[] args) {
+    System.out.println(makeAllSums(4).toString());
   }
 }

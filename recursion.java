@@ -20,5 +20,6 @@ public class recursion {
     else {return fh(n - 1) + fh(n - 2);}
   }
   public static void main(String[] args) {
+    System.out.println(fib(28));
   }
 }

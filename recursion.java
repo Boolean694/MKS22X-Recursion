@@ -2,7 +2,7 @@ import java.util.*;
 public class recursion {
   public static double SquareRt(double n, double p) {
     if(n == 0.0) {return 0.0;}
-    double guess = 1.0;
+    double guess = p;
     return closer(n, guess);
   }
   public static double closer(double n, double guess) {

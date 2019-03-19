@@ -1,6 +1,6 @@
 import java.util.*;
 public class recursion {
-  public static double SquareRt(double n) {
+  public static double SquareRt(double n, double p) {
     if(n == 0.0) {return 0.0;}
     double guess = 1.0;
     return closer(n, guess);
